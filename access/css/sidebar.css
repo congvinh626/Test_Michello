@@ -1,0 +1,13 @@
+.sidebar {
+    background-color: var(--color-gray-dark);
+    padding: 30px 25px;
+}
+
+.sidebar ul li a {
+    font-size: 13px;
+    color: #f1edee;
+    font-weight: 400;
+    padding-bottom: 20px !important;
+    display: flex;
+    justify-content: space-between;
+}

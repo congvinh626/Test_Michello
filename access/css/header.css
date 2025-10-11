@@ -1,0 +1,130 @@
+.top-menu {
+    background-color: var(--color-primary);
+    padding: 18px 0;
+}
+
+.top-menu div {
+    display: flex;
+    gap: 42px;
+}
+
+.top-menu div p {
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-gray);
+    font-weight: 400;
+}
+
+.top-menu div p span {
+    color: var(--color-yellow);
+    font-style: italic;
+font-family: "Droid Serif";
+
+}
+
+.top-menu-right {
+    margin-left: auto;
+}
+
+.nav {
+    padding: 38px 100px;
+}
+
+.nav ul {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 38px;
+}
+
+.nav ul li {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: var(--color-gray-light);
+    font-weight: 700;
+    text-align: right;
+}
+
+.nav ul li.active {
+    color: var(--color-secondary);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.nav ul li.active::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    /* cách chữ 1 chút */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    /* độ dài gạch */
+    height: 3px;
+    /* độ dày gạch */
+    background-color: #c55242;
+    border-radius: 2px;
+}
+
+
+.nav ul li.dot {
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-gray-light);
+    border-radius: 100%;
+    margin-top: 6px;
+}
+
+.nav-right {
+    margin-left: auto;
+}
+
+.banner {
+    background-image: url("../imgs/banner.webp");
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 60px;
+    line-height: 60px;
+    color: var(--color-white);
+    font-weight: 700;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.banner .line {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.banner span {
+    background-color: var(--color-white);
+    width: 110px;
+    height: 1px;
+    display: inline-block;
+}
+
+.banner p {
+    padding: 0 270px;
+    text-align: center;
+    color: var(--color-white);
+    line-height: 28px;
+    font-family: var(--font-alt);
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+}

@@ -1,0 +1,23 @@
+:root {
+  --color-primary: #4d4849;
+  --color-secondary: #c55842;
+  --color-gray-light: #bcc1c4;
+  --color-gray-dark: #4d4749;
+
+  /* --color-gray: #6a6060; */
+  --color-gray: #918686;
+  /* --color-yellow: rgb(246 217 143); */
+  --color-yellow: #d9c183;
+  --color-white: #ffffff;
+  --font-main : 'Montserrat', sans-serif;
+  --font-alt: 'Droid Serif', serif;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: var(--font-main);
+  /* color: var(--color-gray); */
+}
