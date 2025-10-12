@@ -18,7 +18,7 @@
 .top-menu div p span {
     color: var(--color-yellow);
     font-style: italic;
-font-family: "Droid Serif";
+    font-family: "Droid Serif";
 
 }
 
@@ -127,4 +127,31 @@ font-family: "Droid Serif";
     left: 50%;
     transform: translateX(-50%);
     width: 170px;
+}
+
+@media (width < 640px) {}
+
+@media (width < 1024px) {
+    .nav {
+        display: none;
+    }
+
+    .logo {
+        width: 25px;
+    }
+
+    .banner h1 {
+        font-size: 34px;
+        line-height: 15px;
+        padding-top: 60px;
+    }
+
+    .banner p {
+        padding: 0 20px;
+    }
+
+    .top-menu div {
+        gap: 20px;
+    flex-wrap: wrap;
+    }
 }

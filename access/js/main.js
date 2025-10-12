@@ -9,6 +9,7 @@ includeHTML('header', 'components/header.html');
 includeHTML('sidebar', 'components/sidebar.html');
 includeHTML('tabs', 'components/tabs.html');
 includeHTML('footer', 'components/footer.html');
+includeHTML('toggle', 'components/toggle.html');
 
 window.onload = function() {
   const defaultTab = document.querySelector(".tablinks");

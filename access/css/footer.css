@@ -85,3 +85,17 @@
     gap: 5px;
     align-items: center;
 }
+
+@media (width < 1024px) {
+    .footer-title {
+        padding-top: 30px;
+    }
+
+    .footer-content{
+        gap: 20px;
+    }
+
+    .footer-bottom div{
+         flex-wrap: wrap
+    }
+}

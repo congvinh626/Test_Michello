@@ -9,7 +9,7 @@
   /* --color-yellow: rgb(246 217 143); */
   --color-yellow: #d9c183;
   --color-white: #ffffff;
-  --font-main : 'Montserrat', sans-serif;
+  --font-main: 'Montserrat', sans-serif;
   --font-alt: 'Droid Serif', serif;
 }
 
@@ -20,4 +20,11 @@
   line-height: 16px;
   font-family: var(--font-main);
   /* color: var(--color-gray); */
+}
+
+@media (width < 1024px) {
+  .container {
+        padding: 0 10px;
+  }
+
 }
