@@ -1,6 +1,6 @@
 :root {
-  --color-primary: #4d4849;
-  --color-secondary: #c55842;
+  --color-primary: #898989;
+  --color-secondary: #a53e4c;
   --color-gray-light: #bcc1c4;
   --color-gray-dark: #4d4749;
 
@@ -9,16 +9,51 @@
   /* --color-yellow: rgb(246 217 143); */
   --color-yellow: #d9c183;
   --color-white: #ffffff;
-  --font-main: 'Montserrat', sans-serif;
-  --font-alt: 'Droid Serif', serif;
+  --font-main: 'Philosopher', sans-serif;
+  --font-alt: 'Pinyon Script', serif;
+}
+
+p, h1{
+  padding: 0;
+  margin: 0;
+  line-height: 16px;
+}
+
+i {
+  padding: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
+.row > * {
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1770px;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   font-family: var(--font-main);
+  /* color: var(--color-gray); */
+}
+
+.container-content {
+  max-width: 1175px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: var(--font-main);
+
   /* color: var(--color-gray); */
 }
 

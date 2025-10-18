@@ -8,10 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet"> -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital,wght@0,400;0,700;1,400&family=Philosopher:wght@400;600;700&display=swap"
+        rel="stylesheet"> -->
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pinyon+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Philosopher&family=Regular&family=Cinzel&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="access/css/base.css">
     <link rel="stylesheet" href="access/css/header.css">
     <link rel="stylesheet" href="access/css/sidebar.css">
@@ -22,12 +34,819 @@
 </head>
 
 <body>
-    <div id="header"></div>
-    <div class="container grid grid-cols-4 gap-[30px]">
-        <div id="sidebar" class="sm:col-span-1 col-span-4"></div>
-        <div id="tabs" class="sm:col-span-3 col-span-4"></div>
-    </div>
-    <div id="footer"></div>
+
+    <header>
+
+        <div class="top-menu">
+
+            <div class="top-menu container">
+
+                <div class="top-menu-setting">
+                    <img id="toggleSetting" src="../access/icons/Vector-setting.svg" alt="">
+
+
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+                <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="25" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABv0lEQVRIiZ2WsU4CQRCGP8GC0HA1hYmtCVQmdBbGmsbwBDbyBr4C7VUUJPa+AbTWxAcg0oFBxNgYKUwwq/8ld8vO3eGfHORm/vlnmN2dhZKIgF3gicqEVwx7zbAfpZ7ScaEkXeAZaKU4HUO0k9JoKa5rcDMJPoAR8A7cATNgCQw97lD2mXjvivvIS5QkuNS7C5wD1zltrcg/Fx/FBxO5Xi4C1VaLfrrBG0pvb41cT1+BfklhC33ptCzCrfqc9wusnYfiltIx8QjcBJwNIAY2OisbvTcC3BvpZBDpaQOfgUqd0BMwBs6Bur7HsvuJatJpp7QzJ3kSqCyWoN/CquxxIGbi6f595GCjykM4lz8PhUlq8tcNf13+vM2wsw5Zgq1O8pnhP5N/W6CT6d004P/Pmkz9NUl2QBP4Ak69gEN316l0mundlca9Udkh5ySWjoke8K0qLOQtclPxPYvgZs1bapr+F3fS2ZtdyRQeefaTkol83siawqH7xPX/AbgI3CkV2R/EK7xP/ESukjVwBQyAF2DlcVeyD8Rbl7kZ04kWXk+jwGTw/604vosrTJDA72WZJKG4XxwbSawxUTRM9+OAH8E5goTWtOPXAAAAAElFTkSuQmCC"/>
+                </svg> -->
+
+                    <!-- <i id="toggleSetting" class="bi bi-gear" style="font-size: 24px;"></i> -->
+                    <div id="popupSetting" class="popup-setting">
+                        <ul class="popup-setting-item">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">My Wishlist</a></li>
+                            <li><a href="#">Compare</a></li>
+                            <li><a href="#">My Cart</a></li>
+                            <li><a href="#">Check out</a></li>
+                        </ul>
+                        <div class="popup-setting-item">
+                            <p class="popup-setting-title">currency</p>
+                            <div class="radio-item">
+                                <input type="radio" id="USD" name="drone" value="USD" checked />
+                                <label for="USD">USD</label>
+                            </div>
+
+                            <div class="radio-item">
+                                <input type="radio" id="EUR" name="drone" value="EUR" />
+                                <label for="EUR">EUR</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="GBP" name="drone" value="GBP" />
+                                <label for="GBP">GBP</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="CNY" name="drone" value="CNY" />
+                                <label for="CNY">CNY</label>
+                            </div>
+
+                        </div>
+                        <div class="popup-setting-item">
+                            <p class="popup-setting-title">Language</p>
+                            <div class="language">
+                                <img src="/access/imgs/United-Kingdom.png" alt="">
+                                <img src="/access/imgs/Germany.png" alt="">
+                                <img src="/access/imgs/France.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <h1>VINEYARD</h1>
+                <div class="top-menu-right">
+                    <img data-modal="search" id="openModalLogin" src="../access/icons/icon4.webp" alt="">
+                    <img data-modal="login" id="openModalSearch" src="../access/icons/icon2.webp" alt="">
+                    <div class="card">
+                        <img src="../access/icons/icon3.webp" alt="">
+                        <span>4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-item">
+            <div id="modalOverlay" class="modal-overlay"></div>
+            <div id="modalBox" class="modal-search-form">
+                <img id="closeModalBtn" class="modal-close" src="./access/icons/icon-close.svg" alt="">
+
+                <div class="modal-search-content">
+                    <div id="toggleSelect" class="btn-search">
+                        <div>All Category</div> <i class="bi bi-chevron-down"></i>
+
+                    </div>
+                    <div class="input-search">
+                        <input type="text" placeholder="Search">
+                        <img src="./access/icons/icon-search.svg" alt="">
+                    </div>
+                    <div id="popupSelect" class="btns-option">
+                        <ul id="closeSelect">
+                            <li>All Category</li>
+                            <li>All Category</li>
+                            <li>All Category</li>
+                            <li>All Category</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-item">
+            <div id="modalOverlay2" class="modal-overlay"></div>
+            <div id="modalBox2" class="modal-login-form">
+                    aaaaaaaaaaaaa
+            </div>
+        </div>
+        
+
+        <div class="banner">
+            <div class="menu container-content">
+                <ul class="">
+                    <li class="action"><a href="#">Home</a></li>
+                    <li class="sub-menu-list"><a href="#">Shop</a></li>
+                    <li id="menuParent" class="sub-menu-parent"><a href="#">Pages</a>
+                        <ul class="sub-menu-child">
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-parent"><a href="#">Blog</a>
+                        <ul class="sub-menu-child">
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                            <li><a href="#">Product List Sidebar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="sub-menu row container-content">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2">
+                        <h1>men's wine</h1>
+                        <div class="sub-menu-title-line"></div>
+                        <ul class="sub-menu-list-child">
+                            <li><a href="#"> Roes</a></li>
+                            <li><a href="#"> Organic</a></li>
+                            <li><a href="#"> Kasher</a></li>
+                            <li><a href="#"> Champagne</a></li>
+                            <li><a href="#"> Other</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="sub-menu-img">
+                            <img src="./access/imgs/wine-menu.png" alt="">
+                            <div class="sub-menu-img-content">
+                                <h1>Family</h1>
+                                <p>events</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                    <div class="col-sm-3">
+                        <h1>men's wine</h1>
+                        <div class="sub-menu-title-line"></div>
+                        <ul class="sub-menu-list-child">
+                            <li><a href="#"> Roes</a></li>
+                            <li><a href="#"> Organic</a></li>
+                            <li><a href="#"> Kasher</a></li>
+                            <li><a href="#"> Champagne</a></li>
+                            <li><a href="#"> Other</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="sub-menu-img">
+                            <img src="./access/imgs/wine-menu.png" alt="">
+                            <div class="sub-menu-img-content">
+                                <h1>Family</h1>
+                                <p>events</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                </div>
+
+            </div>
+
+            <div class="banner-logo">
+                <div>
+
+                    <img src="../access/imgs/logo-banner.webp" alt="">
+                    <button>shop now</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="welcome">
+            <div class="container-content">
+                <div class="row">
+                    <div class="col-sm">
+                        <img class="welcome-img-banner" src="../access/imgs/banner-welcome.png" alt="">
+                    </div>
+
+                    <div class="col-sm welcome-right glo-title">
+                        <p>welcome</p>
+                        <h1>vaniyear</h1>
+                        <img class="welcome-line" src="../access/icons/line.webp" alt="">
+                        <div>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariaturexplicabout labore.
+                        </div>
+                        <img class="welcome-img" src="../access/imgs/welcome-img-2.png" alt="">
+                    </div>
+                </div>
+                <div class="row welcome-info">
+                    <div class="col-sm-4">
+                        <p>Hostline</p>
+                        <h1>(00)123 456 789</h1>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>We're Open</p>
+                        <h1>mon-sun: 8am-10pm</h1>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Follow Us</p>
+                        <div class="welcome-fotter-img">
+                            <img src="/access/icons/icon_f_2.webp" alt="">
+                            <img src="/access/icons/icon_f_1.webp" alt="">
+                            <img src="/access/icons/icon_f_3.webp" alt="">
+                            <img src="/access/icons/icon_f_1.webp" alt="">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="wine glo-title container-content">
+            <p>Vineyard</p>
+            <h1>FEATURED WINES</h1>
+            <img class="wine-line" src="/access/icons/line.webp" alt="">
+            <ul class="wine-list ">
+                <li>Roes</li>
+                <li class="action">Organic</li>
+                <li>Kosher</li>
+                <li>Champagne</li>
+                <li>Other</li>
+            </ul>
+            <div class="row wine-product ">
+                <div class="col-sm-3">
+                    <div class="wind-product-item">
+                        <img src="/access/imgs/wine.webp" alt="">
+
+                    </div>
+                    <div class="wind-content">
+                        <p>Role Wines</p>
+                        <div class="wind-content-bottom">
+                            <div>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <p class="wind-item-price">$241.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="border-active wind-product-item">
+                        <img src="/access/imgs/wine.webp" alt="">
+
+                    </div>
+                    <div class="wind-content">
+                        <div class="wind-content-bottom">
+                            <img src="/access/icons/icon6.webp" alt="">
+                            <img src="/access/icons/icon7.webp" alt="">
+                            <img src="/access/icons/icon8.webp" alt="">
+                            <div class="bg-test">
+                                <img src="/access/icons/cash.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="wind-product-item">
+                        <img src="/access/imgs/wine.webp" alt="">
+
+                    </div>
+                    <div class="wind-content">
+                        <p>Role Wines</p>
+                        <div class="wind-content-bottom">
+                            <div>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <p class="wind-item-price">$241.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="wind-product-item">
+                        <img src="/access/imgs/wine.webp" alt="">
+
+                    </div>
+                    <div class="wind-content">
+                        <p>Role Wines</p>
+                        <div class="wind-content-bottom">
+                            <div>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <p class="wind-item-price">$241.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="read-mode">View all</button>
+        </section>
+
+        <section class="deal">
+            <div class="glo-title container-content">
+                <div class="row">
+                    <div class="col-sm-2">
+
+                    </div>
+                    <div class="col-sm-8 glo-title">
+                        <p class="">Deal Of Week</p>
+                        <h1>tomatin 12 year old highland</h1>
+                        <img class="deal-line" src="/access/icons/line.webp" alt="">
+                        <div class="glo-title-desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate delectus voluptates ad
+                            atque
+                            explicabo dolore commodi beatae fugiat rem doloremque, iusto voluptatem, quisquam aliquam
+                            quos
+                            doloribus expedita fugit saepe adipisci.
+                        </div>
+                        <div class="deal-time">
+                            <div class="deal-time-item">
+                                <h1>23</h1>
+                                <p class="deal-time-line"></p>
+                                <p>days</p>
+                            </div>
+                            <div class="deal-time-item">
+                                <h1>16</h1>
+                                <p class="deal-time-line"></p>
+                                <p>hours</p>
+                            </div>
+                            <div class="deal-time-item">
+                                <h1>05</h1>
+                                <p class="deal-time-line"></p>
+                                <p>minutes</p>
+                            </div>
+                            <div class="deal-time-item">
+                                <h1>48</h1>
+                                <p class="deal-time-line"></p>
+                                <p>second</p>
+                            </div>
+                        </div>
+                        <button class="glo-btn">Shop now</button>
+                    </div>
+                    <div class="col-sm-2">
+
+                    </div>
+                </div>
+                <div class="deal-wine">
+                    <img src="/access/imgs/wine2.png" alt="">
+                    <div>
+                        <span class="deal-wine-price">$215.00</span>
+                        <span class="deal-wine-hidden"></span>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="product container-content">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="product-list">
+                        <div class="product-header">
+                            <h1 class="product-title">New Arrivals</h1>
+
+                            <img src="/access/icons/icon-right.png" alt="">
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <div class="product-item-bottom">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="bg-test">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="product-list">
+                        <div class="product-header">
+                            <h1 class="product-title">New Arrivals</h1>
+
+                            <img src="/access/icons/icon-right.png" alt="">
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm">
+                    <div class="product-list">
+                        <div class="product-header">
+                            <h1 class="product-title">New Arrivals</h1>
+
+                            <img src="/access/icons/icon-right.png" alt="">
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-img">
+                                <img src="/access/imgs/product-wine.png" alt="">
+                            </div>
+                            <div class="product-item-content">
+                                <p class="product-item-title">Role Wines</p>
+                                <div class="product-item-star">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="glo-price">$241.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="event">
+            <div class="container-content glo-title">
+                <p>Family Winely</p>
+                <h1>Event Wines</h1>
+
+                <img class="event-line" src="/access/icons/line2.png" alt="">
+                <!-- <div class="event-line-dot"></div> -->
+
+                <div class="event-list">
+                    <div class="row event-list-item">
+                        <div class="col-sm-4">
+                            <div class="event-time">
+                                <h1>aug</h1>
+                                <p>SunDay: 2.30-5.30PM</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="event-name">
+                                <h1>wine club pick-up social</h1>
+                                <p>Tastings will be limited to 10 total guests</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="event-price">
+                                <h1>$53</h1>
+                                <p>per persion</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row event-list-item">
+                        <div class="col-sm-4">
+                            <div class="event-time">
+                                <h1>aug</h1>
+                                <p>SunDay: 2.30-5.30PM</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="event-name">
+                                <h1>wine club pick-up social</h1>
+                                <p>Tastings will be limited to 10 total guests</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="event-price">
+                                <h1>$53</h1>
+                                <p>per persion</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="event-time">
+                                <h1>aug</h1>
+                                <p>SunDay: 2.30-5.30PM</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="event-name">
+                                <h1>wine club pick-up social</h1>
+                                <p>Tastings will be limited to 10 total guests</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="event-price">
+                                <h1>$53</h1>
+                                <p>per persion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-line-dot"></div>
+            </div>
+        </section>
+
+        <section class="blog">
+            <div class="container-content glo-title blog-header">
+                <p>Vineyear</p>
+                <h1>Blog Wines</h1>
+                <img class="wine-line" src="/access/icons/line.webp" alt="">
+            </div>
+            <div class="container-content">
+                <div class="row blog-list">
+                    <div class="col-sm blog-content">
+                        <h1>aug <span>08</span></h1>
+                        <p class="blog-desc">I'll Drink to That: Bruce Neyers of Neyers Vineyards</p>
+                        <p class="blog-continue">CONTINUE <i class="bi bi-arrow-right"></i></p>
+                    </div>
+                    <div class="col-sm blog-img">
+                        <img src="/access/imgs/bolg1.webp" alt="">
+                    </div>
+                    <div class="col-sm">
+                        <img src="/access/imgs/bolg1.webp" alt="">
+
+                    </div>
+                    <div class="col-sm blog-content blog-content-right">
+                        <h1>aug <span>08</span></h1>
+                        <p class="blog-desc">I'll Drink to That: Bruce Neyers of Neyers Vineyards</p>
+                        <p class="blog-continue">CONTINUE <i class="bi bi-arrow-right"></i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm blog-content">
+                        <h1>aug <span>08</span></h1>
+                        <p class="blog-desc">I'll Drink to That: Bruce Neyers of Neyers Vineyards</p>
+                        <p class="blog-continue">CONTINUE <i class="bi bi-arrow-right"></i></p>
+                    </div>
+                    <div class="col-sm blog-img">
+                        <img src="/access/imgs/bolg1.webp" alt="">
+                    </div>
+                    <div class="col-sm">
+                        <img src="/access/imgs/bolg1.webp" alt="">
+
+                    </div>
+                    <div class="col-sm blog-content blog-content-right">
+                        <h1>aug <span>08</span></h1>
+                        <p class="blog-desc">I'll Drink to That: Bruce Neyers of Neyers Vineyards</p>
+                        <p class="blog-continue">CONTINUE <i class="bi bi-arrow-right"></i></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-header">
+            <div class="footer-header-icons">
+                <img src="/access/icons/icon_f_1.webp" alt="">
+                <img src="/access/icons/icon_f_2.webp" alt="">
+                <img src="/access/icons/icon_f_3.webp" alt="">
+                <img src="/access/icons/icon_f_1.webp" alt="">
+            </div>
+
+            <img src="/access/icons/icon-top.png" alt="">
+            <img src="/access/imgs/list-logo.webp" alt="">
+        </div>
+        <div class="footer-container">
+            <div class="container-content">
+                <div class="row footer-list">
+                    <div class="col-sm-4 footer-item-1">
+                        <h1>viniyear</h1>
+                        <p>Adress: No 40 Baria Stress 132/2 NewYork City.</p>
+                        <p>NY, United States</p>
+                        <p>Email: info.contact@gmail.com</p>
+                        <p>Phone: (00) 123 456 789</p>
+                    </div>
+                    <div class="col-sm-2 footer-item-2">
+                        <h1>My Accounta</h1>
+                        <p>My account</p>
+                        <p>My ordera</p>
+                        <p>Register</p>
+                        <p>Login</p>
+                    </div>
+                    <div class="col-sm-2 footer-item-2">
+                        <h1>My Accounta</h1>
+                        <p>My account</p>
+                        <p>My ordera</p>
+                        <p>Register</p>
+                        <p>Login</p>
+                    </div>
+                    <div class="col-sm-4 footer-item-4">
+                        <h1>Tag Clound</h1>
+                        <div class="footer-list-btn">
+                            <button>Music</button>
+                            <button>Traver</button>
+                            <button>Video</button>
+                        </div>
+                        <div class="footer-list-btn">
+                            <button>Ecommerce</button>
+                            <button>Feature</button>
+                            <button>Text</button>
+                        </div>
+                        <div class="footer-list-btn">
+                            <button>Sports</button>
+                            <button>Fashion</button>
+                            <button>Store</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-end">
+                    <ul class="footer-menu">
+                        <li>About</li>
+                        <li>|</li>
+                        <li>Customer Service</li>
+                        <li>|</li>
+                        <li>Terms & Conditions</li>
+                        <li>|</li>
+                        <li>Privacy Polycy</li>
+                        <li>|</li>
+                        <li>Site Map</li>
+                        <li>|</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="footer-line"></div>
+                <p class="footer-copyright">Copyright <span>VineYear</span> © 2025. All rights reserved</p>
+            </div>
+
+        </div>
+
+
+    </footer>
     <script src="access/js/main.js"></script>
 </body>
 
