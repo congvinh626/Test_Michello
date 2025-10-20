@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="access/css/sidebar.css">
     <link rel="stylesheet" href="access/css/tabs.css">
     <link rel="stylesheet" href="access/css/footer.css">
+    <link rel="stylesheet" href="access/css/reponsive.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
@@ -41,15 +42,10 @@
 
             <div class="top-menu container">
 
-                <div class="top-menu-setting">
-                    <img id="toggleSetting" src="../access/icons/Vector-setting.svg" alt="">
+                <div class="top-menu-setting ">
+                    <!-- <img class="toggleSetting sm-hidden" src="../access/icons/Vector-setting.svg" alt=""> -->
+                    <img class="toggleSetting top-menu-icon sm-hidden" src="/access/icons/Vector-setting.svg" alt="">
 
-
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
-                <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="25" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABv0lEQVRIiZ2WsU4CQRCGP8GC0HA1hYmtCVQmdBbGmsbwBDbyBr4C7VUUJPa+AbTWxAcg0oFBxNgYKUwwq/8ld8vO3eGfHORm/vlnmN2dhZKIgF3gicqEVwx7zbAfpZ7ScaEkXeAZaKU4HUO0k9JoKa5rcDMJPoAR8A7cATNgCQw97lD2mXjvivvIS5QkuNS7C5wD1zltrcg/Fx/FBxO5Xi4C1VaLfrrBG0pvb41cT1+BfklhC33ptCzCrfqc9wusnYfiltIx8QjcBJwNIAY2OisbvTcC3BvpZBDpaQOfgUqd0BMwBs6Bur7HsvuJatJpp7QzJ3kSqCyWoN/CquxxIGbi6f595GCjykM4lz8PhUlq8tcNf13+vM2wsw5Zgq1O8pnhP5N/W6CT6d004P/Pmkz9NUl2QBP4Ak69gEN316l0mundlca9Udkh5ySWjoke8K0qLOQtclPxPYvgZs1bapr+F3fS2ZtdyRQeefaTkol83siawqH7xPX/AbgI3CkV2R/EK7xP/ESukjVwBQyAF2DlcVeyD8Rbl7kZ04kWXk+jwGTw/604vosrTJDA72WZJKG4XxwbSawxUTRM9+OAH8E5goTWtOPXAAAAAElFTkSuQmCC"/>
-                </svg> -->
-
-                    <!-- <i id="toggleSetting" class="bi bi-gear" style="font-size: 24px;"></i> -->
                     <div id="popupSetting" class="popup-setting">
                         <ul class="popup-setting-item">
                             <li><a href="#">My Account</a></li>
@@ -88,15 +84,59 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <h1>VINEYARD</h1>
-                <div class="top-menu-right">
-                    <img data-modal="search" id="openModalLogin" src="../access/icons/icon4.webp" alt="">
-                    <img data-modal="login" id="openModalSearch" src="../access/icons/icon2.webp" alt="">
-                    <div class="card">
-                        <img src="../access/icons/icon3.webp" alt="">
-                        <span>4</span>
+                <div class="top-menu-right ">
+                    <img class="openModalLogin top-menu-icon sm-hidden" src="/access/icons/Vector-user.svg" alt="">
+                    <img class="openModalSearch top-menu-icon sm-hidden" src="/access/icons/Vector-search.svg" alt="">
+
+                    <div class="toggleCard icon-card">
+                        <img class="top-menu-icon sm-hidden" src="/access/icons/Vector-bag.svg" alt="">
+
+                        <span class="sm-hidden">4</span>
+                        <div id="popupCard" class="popup-card sm-block">
+                            <div class="popup-card-list">
+                                <div class="popup-card-item">
+                                    <div class="popup-card-img">
+                                        <img src="/access/imgs/product-wine.png" alt="">
+                                    </div>
+                                    <div class="popup-card-info">
+                                        <h1>Tomatin 12 Year Old</h1>
+                                        <p>1 X $ 124.00</p>
+                                    </div>
+                                    <img class="popup-card-close" src="/access/icons/icon-close.svg" alt="">
+                                </div>
+                                <div class="popup-card-item">
+                                    <div class="popup-card-img">
+                                        <img src="/access/imgs/product-wine.png" alt="">
+                                    </div>
+                                    <div class="popup-card-info">
+                                        <h1>Tomatin 12 Year Old</h1>
+                                        <p>1 X $ 124.00</p>
+                                    </div>
+                                    <img class="popup-card-close" src="/access/icons/icon-close.svg" alt="">
+                                </div>
+                                <div class="popup-card-item ">
+                                    <div class="popup-card-img">
+                                        <img src="/access/imgs/product-wine.png" alt="">
+                                    </div>
+                                    <div class="popup-card-info">
+                                        <h1>Tomatin 12 Year Old</h1>
+                                        <p>1 X $ 124.00</p>
+                                    </div>
+                                    <img class="popup-card-close" src="/access/icons/icon-close.svg" alt="">
+                                </div>
+                                <div class="popup-card-footer">
+                                    <div class="popup-card-price">
+                                        total:
+                                        <span>$168.00</span>
+                                    </div>
+                                    <button>view card</button>
+                                    <button>check out</button>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,14 +170,30 @@
         <div class="modal-item">
             <div id="modalOverlay2" class="modal-overlay"></div>
             <div id="modalBox2" class="modal-login-form">
-                    aaaaaaaaaaaaa
+                <img id="closeModalBtn2" class="modal-close" src="/access/icons/icon-close.svg" alt="">
+                <h1 class="login-title">Login</h1>
+                <div>
+                    <label class="login-label" for="Username">Username*</label>
+                    <input class="login-input" type="text">
+                    <label class="login-label" for="Username">Password*</label>
+                    <input class="login-input" type="text">
+                </div>
+
+                <button class="btn-login">Login</button>
+                <div class="login-redic">
+                    <a href="#">Register</a>
+                    <a href="#">Forgot Password</a>
+                </div>
             </div>
         </div>
-        
+
 
         <div class="banner">
             <div class="menu container-content">
-                <ul class="">
+                <div class="menu-toggle" id="menuToggle">
+                    ☰ <!-- biểu tượng menu hamburger -->
+                </div>
+                <ul class="menu-desktop">
                     <li class="action"><a href="#">Home</a></li>
                     <li class="sub-menu-list"><a href="#">Shop</a></li>
                     <li id="menuParent" class="sub-menu-parent"><a href="#">Pages</a>
@@ -162,6 +218,84 @@
                     </li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+
+                <div class="menu-modal" id="menuModal">
+                    <div class="menu-modal-content">
+                        <div class="menu-close" id="menuClose">×</div>
+                        <ul>
+                            <li class="action"><a href="#">Home</a></li>
+                            <li id="menuModalToggle" class="sub-menu-list"><a href="#">Shop</a></li>
+                            <li id="menuModalParent" class="menu-modal-parent"><a href="#">Pages <span><i
+                                            class="bi bi-chevron-down"></i></span></a>
+                                <ul id="menuModalChild" class="menu-modal-child">
+                                    <li><a href="#">Product List Sidebar</a></li>
+                                    <li><a href="#">Product List Sidebar</a></li>
+                                    <li><a href="#">Product List Sidebar</a></li>
+                                    <li><a href="#">Product List Sidebar</a></li>
+                                    <li><a href="#">Product List Sidebar</a></li>
+                                    <li><a href="#">Product List Sidebar</a></li>
+                                    <li><a href="#">Product List Sidebar</a></li>
+                                    <li><a href="#">Product List Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li class="menu-modal-footer-li">
+                                <div class="menu-modal-footer">
+                                    <!-- <img class="toggleSetting" src="../access/icons/Vector-setting.svg" alt=""> -->
+                                    <img class="toggleSetting vector-menu" src="/access/icons/Vector-setting.svg"
+                                        alt="">
+                                    <img class="openModalLogin vector-menu" src="/access/icons/Vector-user.svg" alt="">
+                                    <img class="openModalSearch vector-menu" src="/access/icons/Vector-search.svg"
+                                        alt="">
+                                    <img class="toggleCard vector-menu" src="/access/icons/Vector-bag.svg" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                        <div id="menuModalSub" class="menu-modal-sub ">
+                            <div class="menu-modal-sub-content">
+                                <h1>men's wine</h1>
+                                <ul class="menu-modal-sub-child">
+                                    <li><a href="#"> Roes</a></li>
+                                    <li><a href="#"> Organic</a></li>
+                                    <li><a href="#"> Kasher</a></li>
+                                    <li><a href="#"> Champagne</a></li>
+                                    <li><a href="#"> Other</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="sub-menu-img">
+                                    <img src="./access/imgs/wine-menu.png" alt="">
+                                    <div class="sub-menu-img-content">
+                                        <h1>Family</h1>
+                                        <p>events</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-modal-sub-content">
+                                <h1>men's wine</h1>
+                                <ul class="menu-modal-sub-child">
+                                    <li><a href="#"> Roes</a></li>
+                                    <li><a href="#"> Organic</a></li>
+                                    <li><a href="#"> Kasher</a></li>
+                                    <li><a href="#"> Champagne</a></li>
+                                    <li><a href="#"> Other</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="sub-menu-img">
+                                    <img src="./access/imgs/wine-menu.png" alt="">
+                                    <div class="sub-menu-img-content">
+                                        <h1>Family</h1>
+                                        <p>events</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <div class="sub-menu row container-content">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-2">
@@ -226,11 +360,11 @@
         <section class="welcome">
             <div class="container-content">
                 <div class="row">
-                    <div class="col-sm">
+                    <div class="col-md">
                         <img class="welcome-img-banner" src="../access/imgs/banner-welcome.png" alt="">
                     </div>
 
-                    <div class="col-sm welcome-right glo-title">
+                    <div class="col-md welcome-right glo-title">
                         <p>welcome</p>
                         <h1>vaniyear</h1>
                         <img class="welcome-line" src="../access/icons/line.webp" alt="">
@@ -245,15 +379,15 @@
                     </div>
                 </div>
                 <div class="row welcome-info">
-                    <div class="col-sm-4">
+                    <div class="col-12 col-md-4">
                         <p>Hostline</p>
                         <h1>(00)123 456 789</h1>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-12 col-md-4">
                         <p>We're Open</p>
                         <h1>mon-sun: 8am-10pm</h1>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-12 col-md-4">
                         <p>Follow Us</p>
                         <div class="welcome-fotter-img">
                             <img src="/access/icons/icon_f_2.webp" alt="">
@@ -279,79 +413,130 @@
                 <li>Other</li>
             </ul>
             <div class="row wine-product ">
-                <div class="col-sm-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="wind-product-item">
-                        <img src="/access/imgs/wine.webp" alt="">
-
-                    </div>
-                    <div class="wind-content">
-                        <p>Role Wines</p>
-                        <div class="wind-content-bottom">
-                            <div>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <p class="wind-item-price">$241.00</p>
+                        <div class="wind-product-img">
+                            <img src="/access/imgs/wine.webp" alt="">
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 ">
-                    <div class="border-active wind-product-item">
-                        <img src="/access/imgs/wine.webp" alt="">
-
-                    </div>
-                    <div class="wind-content">
-                        <div class="wind-content-bottom">
-                            <img src="/access/icons/icon6.webp" alt="">
-                            <img src="/access/icons/icon7.webp" alt="">
-                            <img src="/access/icons/icon8.webp" alt="">
-                            <div class="bg-test">
-                                <img src="/access/icons/cash.png" alt="">
+                        <div class="wind-content wind-content-hidden">
+                            <p>Role Wines</p>
+                            <div class="wind-content-bottom">
+                                <div>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="wind-item-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="wind-content wind-content-active">
+                            <div class="wind-content-bottom">
+                                <img src="/access/icons/icon6.webp" alt="">
+                                <img src="/access/icons/icon7.webp" alt="">
+                                <img src="/access/icons/icon8.webp" alt="">
+                                <div class="product-icon-card">
+                                    <img src="/access/icons/cash.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="wind-product-item">
-                        <img src="/access/imgs/wine.webp" alt="">
+                        <div class="wind-product-img border-active">
+                            <img src="/access/imgs/wine.webp" alt="">
+                        </div>
 
-                    </div>
-                    <div class="wind-content">
-                        <p>Role Wines</p>
-                        <div class="wind-content-bottom">
-                            <div>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
+                        <div class="wind-content wind-content-hidden">
+                            <p>Role Wines</p>
+                            <div class="wind-content-bottom">
+                                <div>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="wind-item-price">$241.00</p>
                             </div>
-                            <p class="wind-item-price">$241.00</p>
+                        </div>
+                        <div class="wind-content wind-content-active">
+                            <div class="wind-content-bottom">
+                                <img src="/access/icons/icon6.webp" alt="">
+                                <img src="/access/icons/icon7.webp" alt="">
+                                <img src="/access/icons/icon8.webp" alt="">
+                                <div class="product-icon-card">
+                                    <img src="/access/icons/cash.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="wind-product-item">
-                        <img src="/access/imgs/wine.webp" alt="">
+                        <div class="wind-product-img border-active">
+                            <img src="/access/imgs/wine.webp" alt="">
+                        </div>
 
-                    </div>
-                    <div class="wind-content">
-                        <p>Role Wines</p>
-                        <div class="wind-content-bottom">
-                            <div>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
+                        <div class="wind-content wind-content-hidden">
+                            <p>Role Wines</p>
+                            <div class="wind-content-bottom">
+                                <div>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="wind-item-price">$241.00</p>
                             </div>
-                            <p class="wind-item-price">$241.00</p>
+                        </div>
+                        <div class="wind-content wind-content-active">
+                            <div class="wind-content-bottom">
+                                <img src="/access/icons/icon6.webp" alt="">
+                                <img src="/access/icons/icon7.webp" alt="">
+                                <img src="/access/icons/icon8.webp" alt="">
+                                <div class="product-icon-card">
+                                    <img src="/access/icons/cash.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="wind-product-item">
+                        <div class="wind-product-img border-active">
+                            <img src="/access/imgs/wine.webp" alt="">
+                        </div>
+
+                        <div class="wind-content wind-content-hidden">
+                            <p>Role Wines</p>
+                            <div class="wind-content-bottom">
+                                <div>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="wind-item-price">$241.00</p>
+                            </div>
+                        </div>
+                        <div class="wind-content wind-content-active">
+                            <div class="wind-content-bottom">
+                                <img src="/access/icons/icon6.webp" alt="">
+                                <img src="/access/icons/icon7.webp" alt="">
+                                <img src="/access/icons/icon8.webp" alt="">
+                                <div class="product-icon-card">
+                                    <img src="/access/icons/cash.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <button class="read-mode">View all</button>
         </section>
@@ -359,10 +544,10 @@
         <section class="deal">
             <div class="glo-title container-content">
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-1 col-xxl-2">
 
                     </div>
-                    <div class="col-sm-8 glo-title">
+                    <div class="col-sm-8 col-xxl-8 glo-title">
                         <p class="">Deal Of Week</p>
                         <h1>tomatin 12 year old highland</h1>
                         <img class="deal-line" src="/access/icons/line.webp" alt="">
@@ -397,7 +582,7 @@
                         </div>
                         <button class="glo-btn">Shop now</button>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1 col-xxl-2">
 
                     </div>
                 </div>
@@ -435,8 +620,17 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                         <div class="product-item">
                             <div class="product-item-img">
@@ -451,11 +645,12 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <div class="product-item-bottom">
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
                                     <img src="/access/icons/icon6.webp" alt="">
                                     <img src="/access/icons/icon7.webp" alt="">
                                     <img src="/access/icons/icon8.webp" alt="">
-                                    <div class="bg-test">
+                                    <div class="product-icon-card">
                                         <img src="/access/icons/cash.png" alt="">
                                     </div>
                                 </div>
@@ -474,7 +669,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-item">
@@ -490,7 +693,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -515,7 +726,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-item">
@@ -531,7 +750,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-item">
@@ -547,7 +774,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-item">
@@ -563,7 +798,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -589,7 +832,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-item">
@@ -605,7 +856,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-item">
@@ -621,7 +880,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-item">
@@ -637,7 +904,15 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <p class="glo-price">$241.00</p>
+                                <p class="glo-price product-item-hidden">$241.00</p>
+                                <div class="product-item-bottom product-item-active">
+                                    <img src="/access/icons/icon6.webp" alt="">
+                                    <img src="/access/icons/icon7.webp" alt="">
+                                    <img src="/access/icons/icon8.webp" alt="">
+                                    <div class="product-icon-card">
+                                        <img src="/access/icons/cash.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -655,19 +930,19 @@
 
                 <div class="event-list">
                     <div class="row event-list-item">
-                        <div class="col-sm-4">
+                        <div class="col-12  col-md-4">
                             <div class="event-time">
                                 <h1>aug</h1>
                                 <p>SunDay: 2.30-5.30PM</p>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-12  col-md-6">
                             <div class="event-name">
                                 <h1>wine club pick-up social</h1>
                                 <p>Tastings will be limited to 10 total guests</p>
                             </div>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-12  col-md-2">
                             <div class="event-price">
                                 <h1>$53</h1>
                                 <p>per persion</p>
@@ -675,19 +950,19 @@
                         </div>
                     </div>
                     <div class="row event-list-item">
-                        <div class="col-sm-4">
+                        <div class="col-12  col-md-4">
                             <div class="event-time">
                                 <h1>aug</h1>
                                 <p>SunDay: 2.30-5.30PM</p>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-12  col-md-6">
                             <div class="event-name">
                                 <h1>wine club pick-up social</h1>
                                 <p>Tastings will be limited to 10 total guests</p>
                             </div>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-12  col-md-2">
                             <div class="event-price">
                                 <h1>$53</h1>
                                 <p>per persion</p>
@@ -695,19 +970,19 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-12  col-md-4">
                             <div class="event-time">
                                 <h1>aug</h1>
                                 <p>SunDay: 2.30-5.30PM</p>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-12  col-md-6">
                             <div class="event-name">
                                 <h1>wine club pick-up social</h1>
                                 <p>Tastings will be limited to 10 total guests</p>
                             </div>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-12  col-md-2">
                             <div class="event-price">
                                 <h1>$53</h1>
                                 <p>per persion</p>
@@ -727,38 +1002,38 @@
             </div>
             <div class="container-content">
                 <div class="row blog-list">
-                    <div class="col-sm blog-content">
+                    <div class="col-12 col-sm-6 col-xl blog-content">
                         <h1>aug <span>08</span></h1>
                         <p class="blog-desc">I'll Drink to That: Bruce Neyers of Neyers Vineyards</p>
                         <p class="blog-continue">CONTINUE <i class="bi bi-arrow-right"></i></p>
                     </div>
-                    <div class="col-sm blog-img">
+                    <div class="col-12 col-sm-6 col-xl blog-img">
                         <img src="/access/imgs/bolg1.webp" alt="">
                     </div>
-                    <div class="col-sm">
+                    <div class="col-12 col-sm-6 col-xl blog-img">
                         <img src="/access/imgs/bolg1.webp" alt="">
 
                     </div>
-                    <div class="col-sm blog-content blog-content-right">
+                    <div class="col-12 col-sm-6 col-xl blog-content blog-content-right">
                         <h1>aug <span>08</span></h1>
                         <p class="blog-desc">I'll Drink to That: Bruce Neyers of Neyers Vineyards</p>
                         <p class="blog-continue">CONTINUE <i class="bi bi-arrow-right"></i></p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm blog-content">
+                <div class="row blog-list">
+                    <div class="col-12 col-sm-6 col-xl blog-content">
                         <h1>aug <span>08</span></h1>
                         <p class="blog-desc">I'll Drink to That: Bruce Neyers of Neyers Vineyards</p>
                         <p class="blog-continue">CONTINUE <i class="bi bi-arrow-right"></i></p>
                     </div>
-                    <div class="col-sm blog-img">
+                    <div class="col-12 col-sm-6 col-xl blog-img">
                         <img src="/access/imgs/bolg1.webp" alt="">
                     </div>
-                    <div class="col-sm">
+                    <div class="col-12 col-sm-6 col-xl blog-img">
                         <img src="/access/imgs/bolg1.webp" alt="">
 
                     </div>
-                    <div class="col-sm blog-content blog-content-right">
+                    <div class="col-12 col-sm-6 col-xl blog-content blog-content-right">
                         <h1>aug <span>08</span></h1>
                         <p class="blog-desc">I'll Drink to That: Bruce Neyers of Neyers Vineyards</p>
                         <p class="blog-continue">CONTINUE <i class="bi bi-arrow-right"></i></p>
@@ -784,28 +1059,28 @@
         <div class="footer-container">
             <div class="container-content">
                 <div class="row footer-list">
-                    <div class="col-sm-4 footer-item-1">
+                    <div class="col-12 col-lg-4 footer-item-1">
                         <h1>viniyear</h1>
                         <p>Adress: No 40 Baria Stress 132/2 NewYork City.</p>
                         <p>NY, United States</p>
                         <p>Email: info.contact@gmail.com</p>
                         <p>Phone: (00) 123 456 789</p>
                     </div>
-                    <div class="col-sm-2 footer-item-2">
+                    <div class="col-12 col-lg-2 footer-item-2">
                         <h1>My Accounta</h1>
                         <p>My account</p>
                         <p>My ordera</p>
                         <p>Register</p>
                         <p>Login</p>
                     </div>
-                    <div class="col-sm-2 footer-item-2">
+                    <div class="col-12 col-lg-2 footer-item-2">
                         <h1>My Accounta</h1>
                         <p>My account</p>
                         <p>My ordera</p>
                         <p>Register</p>
                         <p>Login</p>
                     </div>
-                    <div class="col-sm-4 footer-item-4">
+                    <div class="col-12 col-lg-4 footer-item-4">
                         <h1>Tag Clound</h1>
                         <div class="footer-list-btn">
                             <button>Music</button>

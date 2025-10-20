@@ -21,6 +21,7 @@ svg {
     z-index: 1;
     border-top: 1px dashed var(--color-secondary);
     width: 172px;
+    z-index: 99999;
 }
 
 .popup-setting-item {
@@ -29,15 +30,19 @@ svg {
 }
 
 
-.popup-setting {
+.popup-setting,
+.popup-card,
+.menu-modal-sub {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: all 0.4s ease;
 }
 
-.popup-setting.show {
-    max-height: 570px;
+.popup-setting.show,
+.popup-card.show,
+.menu-modal-sub.show {
+    max-height: 1500px;
     opacity: 1;
 }
 
@@ -85,7 +90,7 @@ input[type="radio"] {
     gap: 50px;
 }
 
-.top-menu h1 {
+.top-menu>h1 {
     font-size: 36px;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -96,16 +101,16 @@ input[type="radio"] {
     padding: 50px 0;
 }
 
-.top-menu img {
+.top-menu>img {
     height: 25px;
 }
 
 
-.card {
+.icon-card {
     position: relative;
 }
 
-.card span {
+.icon-card>span {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -124,6 +129,99 @@ input[type="radio"] {
     font-family: "Josefin Sans";
 }
 
+.popup-card {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    background: white;
+    width: 295px;
+    z-index: 9999;
+}
+
+.popup-card-list {
+    padding: 28px 20px;
+    border-top: 1px dashed var(--color-secondary);
+}
+
+.popup-card-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+.popup-card-item:nth-last-child(2) {
+    padding-bottom: 28px;
+    border-bottom: 1px dashed rgb(165, 62, 76, .3);
+}
+
+.popup-card-footer {
+    text-transform: uppercase;
+}
+
+.popup-card-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+    font-weight: bold;
+}
+
+.popup-card-price span {
+    color: var(--color-secondary);
+}
+
+.popup-card-footer button {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background: var(--color-secondary);
+    margin-bottom: 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.popup-card-footer button:last-child {
+    color: black;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin-bottom: 0;
+}
+
+.popup-card-img {
+    width: 70px;
+    height: 90px;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    padding: 14px 26px;
+}
+
+.popup-card-img {
+    height: 100%;
+}
+
+.popup-card-info>h1 {
+    font-size: 14px;
+    color: rgb(54, 54, 54);
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+
+}
+
+.popup-card-info>p {
+    font-size: 14px;
+    color: var(--color-secondary);
+
+}
+
+.popup-card-close {
+    margin-left: auto;
+}
+
 .banner {
     width: 100%;
     height: 950px;
@@ -135,7 +233,7 @@ input[type="radio"] {
     position: relative;
 }
 
-.menu>ul {
+.menu-desktop {
     display: flex;
     justify-content: center;
     gap: 155px;
@@ -148,10 +246,134 @@ input[type="radio"] {
 
 .menu li:hover {
     color: var(--color-secondary);
+    transition: all 0.4s ease;
 }
 
 .menu .action {
     color: var(--color-secondary);
+}
+
+/* --- Modal menu --- */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 24px 0;
+    color: var(--color-secondary);
+}
+
+
+.menu-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    z-index: 999;
+}
+
+.menu-modal.show {
+    width: 100%;
+}
+
+
+
+/* Nội dung menu trượt từ phải qua trái */
+.menu-modal-content {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 200px;
+    height: 100%;
+    background-color: #222;
+    padding: 20px 0;
+    transition: all 0.4s ease;
+}
+
+.menu-modal.show .menu-modal-content {
+    right: 0;
+}
+
+.menu-modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu-modal-content li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.menu-modal-content li:last-child {
+    border-bottom: none;
+}
+
+.menu-modal-parent a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-modal-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-modal-sub {
+    position: absolute;
+    top: 84px;
+    left: -226px;
+    background: #222;
+}
+
+.menu-modal-sub-content h1 {
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+.menu-modal-sub-child li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.menu-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+
+.menu-modal-child {
+    display: none;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.menu-modal-child.show {
+    display: block !important;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* //////////// */
+
+
+
+
+.menu-toggle {
+    display: none;
 }
 
 .sub-menu-child {
@@ -166,6 +388,7 @@ input[type="radio"] {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    transition: all 0.4s ease;
     /* trượt lên */
 }
 
@@ -414,6 +637,7 @@ input[type="radio"] {
     text-transform: uppercase;
     margin-top: 16px;
     letter-spacing: 5px;
+    line-height: 1.333;
 
 }
 
@@ -437,6 +661,7 @@ input[type="radio"] {
 
 .wine-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
     margin-bottom: 60px;
@@ -447,18 +672,23 @@ input[type="radio"] {
 }
 
 .wind-product-item {
-    border: 1px solid rgb(0, 0, 0, 0.1);
-    /* margin: 0 -15px; */
-
+    margin: 0 16px;
 }
 
-.wind-product-item img {
+.wind-product-item {}
+
+.wind-product-img {
+    border: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.wind-product-img img {
     margin: auto;
     padding: 40px 0 30px 0;
 }
 
-.border-active {
+.wind-product-item:hover .wind-product-img {
     border: 1px solid var(--color-secondary) !important;
+    transition: all 0.4s ease;
 }
 
 .wind-content {
@@ -474,9 +704,62 @@ input[type="radio"] {
 
 }
 
+.wind-content-bottom > img {
+    width: 48px;
+    height: 48px;
+}
+
 .wind-content>p {
     font-size: 14px;
     color: #898989;
+}
+
+.wind-content-hidden {
+    display: block;
+}
+
+/* Mặc định: ẩn phần "active" */
+.wind-content-active {
+    display: none !important;
+}
+
+.wind-content-active .wind-content-bottom{
+    margin-bottom: -20px;
+}
+
+/* Khi hover vào sản phẩm → đảo ngược */
+.wind-product-item:hover .wind-content-hidden {
+    display: none !important;
+    transition: all 0.4s ease;
+}
+
+.wind-product-item:hover .wind-content-active {
+    display: block !important;
+    transition: all 0.4s ease;
+}
+
+
+.product-item-hidden {
+    display: flex;
+}
+
+.product-item-active {
+    display: none !important;
+}
+
+.product-item:hover .product-item-hidden {
+    display: none !important;
+    transition: all 0.4s ease;
+}
+
+.product-item:hover .product-item-active {
+    display: flex !important;
+    transition: all 0.4s ease;
+}
+
+.product-item:hover>.product-item-img:hover {
+    border: 1px solid var(--color-secondary) !important;
+    transition: all 0.4s ease;
 }
 
 .wind-item-price {
@@ -487,11 +770,11 @@ input[type="radio"] {
     text-transform: uppercase;
 }
 
-.bg-test {
+.product-icon-card {
     background-color: var(--color-secondary);
     border-radius: 100%;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -526,7 +809,7 @@ input[type="radio"] {
 
 .deal {
     background-color: #f4f6f9;
-    background: url('../imgs/deal.webp') no-repeat;
+    background: url('../imgs/deal.webp') no-repeat  center;
     height: 705px;
     width: 100%;
     background-size: cover;
@@ -555,6 +838,7 @@ input[type="radio"] {
 
 .deal-time {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin-top: 50px;
@@ -658,6 +942,9 @@ input[type="radio"] {
     transform: rotate(45deg);
 }
 
+.deal-wine-price {
+    letter-spacing: 3px;
+}
 
 /* ======= product ========== */
 .product {
@@ -677,6 +964,10 @@ input[type="radio"] {
     margin-bottom: 30px;
 }
 
+.product-list {
+    padding: 15px;
+}
+
 .product-item-img {
     border: 1px solid rgb(0, 0, 0, 0.1);
     width: 100px;
@@ -688,10 +979,21 @@ input[type="radio"] {
 
 .product-item-title {
     margin: 18px 0;
+    color: rgb(137, 137, 137);
 }
 
-.product-item-star {
-    margin-bottom: 30px;
+.product-item-content .glo-price {
+    margin-top: 30px !important;
+}
+
+.product-item-content .product-item-bottom {
+    margin-top: 20px !important;
+}
+
+.product-item:hover .product-item-img {
+    border: 1px solid var(--color-secondary);
+    transition: all 0.4s ease;
+    /* Hoặc màu bạn muốn */
 }
 
 .glo-price {
@@ -708,7 +1010,12 @@ input[type="radio"] {
 }
 
 .product-item-bottom>img {
-    width: 50px;
+    width: 48px;
+    height: 48px;
+}
+
+.product-action {
+    margin-bottom: 18px;
 }
 
 .product-header {
@@ -774,6 +1081,7 @@ input[type="radio"] {
     font-family: "Cinzel";
     color: rgb(255, 255, 255);
     font-weight: bold;
+    line-height: 1.5;
 }
 
 .event-name p {
@@ -781,6 +1089,7 @@ input[type="radio"] {
     font-family: "Josefin Sans", sans-serif;
     color: rgb(183, 183, 183);
     padding-top: 20px;
+    line-height: 1.5;
 }
 
 .event-price {
@@ -875,8 +1184,15 @@ input[type="radio"] {
 }
 
 .blog-img {
+    /* width: 100%; */
+    padding: 0 15px;
+}
+
+.blog-img img {
     width: 100%;
 }
+
+
 
 .blog-content-right {
     text-align: right;
@@ -892,6 +1208,11 @@ input[type="radio"] {
 
 .blog-list {
     margin-bottom: 30px;
+    /* gap: 30px; */
+}
+
+.blog-list:last-child {
+    margin-bottom: 0px;
 }
 
 /* ======= footer ======= */
@@ -899,6 +1220,7 @@ input[type="radio"] {
 .footer-header {
     background-color: #252525;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     height: 60px;
     padding: 0 70px;
@@ -1039,8 +1361,8 @@ input[type="radio"] {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     background: white;
-    padding: 70px 200px;
-    width: 1170px;
+    padding: 30px;
+    width: 302px;
     opacity: 0;
     visibility: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -1118,6 +1440,7 @@ input[type="radio"] {
 
 .btns-option li:hover {
     background: #f44c63;
+    transition: all 0.4s ease;
 }
 
 /* .modal-search i {
@@ -1154,4 +1477,77 @@ input[type="radio"] {
 }
 
 
-.modal-login-form {}
+.login-title {
+    font-size: 24px;
+    font-family: "Philosopher";
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+    letter-spacing: 5px;
+
+}
+
+.login-label {
+    font-size: 18px;
+    font-family: "Philosopher";
+    color: rgb(137, 137, 137);
+}
+
+.login-input {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.login-input {
+    margin-bottom: 52px;
+    width: 100%;
+}
+
+.login-input:last-child {
+    margin-bottom: 38px;
+}
+
+.btn-login {
+    font-size: 13px;
+    font-family: "Philosopher";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 20px;
+    height: 40px;
+    width: 122px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    margin: 0 auto;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+
+}
+
+.login-redic {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgb(137, 137, 137);
+}
+
+.vector-menu{
+filter: brightness(0) invert(1);}
+
+.menu-modal-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-modal-footer-li{
+    display: none;
+}
+
+
+.top-menu-icon{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

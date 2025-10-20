@@ -1,0 +1,144 @@
+@media (width < 500px) {
+
+    /* .     {
+        display: none;
+    }
+    
+     */
+    .top-menu {
+        justify-content: center;
+    }
+
+    .sm-hidden {
+        display: none !important;
+    }
+
+    .sm-block {
+        display: block !important;
+    }
+
+    .popup-card {
+        top: 272px;
+        right: -110px;
+    }
+
+
+    .menu-modal-footer-li {
+        display: block;
+    }
+
+    .popup-setting{
+            left: -85px;
+    }
+}
+
+@media (width < 800px) {
+    .event {
+        height: 1415px;
+    }
+
+    .event-price {
+        margin-top: 26px;
+        text-align: left;
+    }
+
+    .event-time h1 {
+        font-size: 24px;
+    }
+
+    .event-name h1 {
+        font-size: 20px;
+    }
+
+    .event-line {
+        margin: 40px auto 60px auto;
+    }
+
+    .welcome-info {
+        gap: 40px;
+    }
+
+
+    .blog-content-right {
+        text-align: left;
+    }
+
+    .product {
+        padding: 100px 0 0 0;
+    }
+
+    .footer-header {
+        height: 120px;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap;
+    }
+
+
+
+    .deal {
+        height: 1030px;
+    }
+
+
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+
+}
+
+@media (width < 1000px) {
+    .footer-container {
+        height: 1260px;
+    }
+
+    .blog-content {
+        margin-bottom: 40px;
+    }
+
+    .blog-img {
+        margin-bottom: 40px;
+    }
+}
+
+@media (width < 1400px) {
+    /* .deal-wine {
+        display: none;
+    } */
+
+
+    .product-item-bottom>img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .product-icon-card {
+        width: 40px;
+        height: 40px;
+        padding: 12px;
+    }
+
+    .wind-content-bottom>img {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media (width < 1700px) {
+    .deal-wine {
+            width: 300px;
+    }
+
+    .deal-wine div {
+        right: 50px;
+    }
+}
