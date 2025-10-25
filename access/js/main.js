@@ -1,14 +1,3 @@
-// const btnSettings = document.querySelectorAll('.toggleSetting');
-// const popupSetting = document.getElementById('popupSetting');
-
-// // btnSetting.addEventListener('click', () => {
-// //   popupSetting.classList.toggle('show');
-// // });
-// btnSettings.forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     popupSetting.classList.toggle('show');
-//   });
-// });
 const btnSettings = document.querySelectorAll('.toggleSetting');
 const popupSetting = document.getElementById('popupSetting');
 
@@ -17,8 +6,6 @@ btnSettings.forEach(btn => {
     popupSetting.classList.toggle('show');
   });
 });
-
-
 
 const btnCards = document.querySelectorAll('.toggleCard');
 const popupCard = document.getElementById('popupCard');
@@ -53,8 +40,6 @@ shopMenu.addEventListener('mouseenter', () => {
 });
 
 
-
-// Khi rời khỏi "Shop" → chờ 200ms, nếu chưa hover vào submenu thì ẩn
 shopMenu.addEventListener('mouseleave', () => {
   hideTimeout = setTimeout(() => {
     if (!subMenu.matches(':hover')) {
@@ -110,10 +95,7 @@ const openBtnLogins = document.querySelectorAll('.openModalLogin');
 const modal2 = document.getElementById('modalBox2');
 const overlay2 = document.getElementById('modalOverlay2');
 
-// openBtnLogin.addEventListener('click', () => {
-//   modal2.classList.add('show');
-//   overlay2.classList.add('show');
-// });
+
 openBtnLogins.forEach(btn => {
   btn.addEventListener('click', () => {
     modal2.classList.add('show');
@@ -159,3 +141,27 @@ const menuModalChild = document.getElementById("menuModalChild");
 menuModalParent.addEventListener("click", () => {
   menuModalChild.classList.toggle("show");
 });
+
+
+// Countdown Timer
+
+let totalSeconds =
+  (23 * 24 * 60 * 60) + // 23 ngày
+  (16 * 60 * 60) +      // 16 giờ
+  (5 * 60) +           // 5 phút
+  48;                   // 48 giây
+
+const days = document.getElementById("days");
+const hours = document.getElementById("hours");
+const minutes = document.getElementById("minutes");
+const seconds = document.getElementById("seconds");
+
+const timer = setInterval(() => {
+  totalSeconds--;
+
+  days.innerHTML = Math.floor(totalSeconds / (24 * 60 * 60));
+  hours.innerHTML = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+  minutes.innerHTML = Math.floor((totalSeconds % (60 * 60)) / 60);
+  seconds.innerHTML = totalSeconds % 60;
+
+}, 1000);

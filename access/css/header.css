@@ -99,6 +99,8 @@ input[type="radio"] {
     font-family: "Philosopher";
     text-align: center;
     padding: 50px 0;
+    flex: 1;
+    text-align: center;
 }
 
 .top-menu>img {
@@ -227,6 +229,16 @@ input[type="radio"] {
     height: 950px;
     background: url('../imgs/banner.webp') no-repeat center;
     background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.banner.slide {
+    transition: background-position 2s ease-in-out;
+}
+
+.banner.fade {
+    opacity: 0;
 }
 
 .menu {
@@ -679,6 +691,55 @@ input[type="radio"] {
 
 .wind-product-img {
     border: 1px solid rgb(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.wind-product-new {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 8px 12px;
+    width: 65px;
+    display: inline;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: left;
+}
+
+.wind-product-img .square-left {
+    position: absolute;
+    top: 14px;
+    left: 54px;
+    width: 25px;
+    height: 25px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.wind-product-sale {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: #363636;
+    color: white;
+    padding: 8px 12px;
+    width: 65px;
+    display: inline;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: right;
+}
+
+.wind-product-img .square-right {
+    position: absolute;
+    top: 14px;
+    right: 54px;
+    width: 25px;
+    height: 25px;
+    background: white;
+    transform: rotate(45deg);
 }
 
 .wind-product-img img {
@@ -704,7 +765,7 @@ input[type="radio"] {
 
 }
 
-.wind-content-bottom > img {
+.wind-content-bottom>img {
     width: 48px;
     height: 48px;
 }
@@ -723,7 +784,7 @@ input[type="radio"] {
     display: none !important;
 }
 
-.wind-content-active .wind-content-bottom{
+.wind-content-active .wind-content-bottom {
     margin-bottom: -20px;
 }
 
@@ -809,7 +870,7 @@ input[type="radio"] {
 
 .deal {
     background-color: #f4f6f9;
-    background: url('../imgs/deal.webp') no-repeat  center;
+    background: url('../imgs/deal.webp') no-repeat center;
     height: 705px;
     width: 100%;
     background-size: cover;
@@ -914,16 +975,22 @@ input[type="radio"] {
     /* height: 600px; */
 }
 
-.deal-wine img {
+.deal-wine-list {
+    background: white;
+    padding-bottom: 25px;
+}
+
+.deal-wine-item img {
     margin: auto;
     padding-top: 58px;
     position: relative;
+    width: 375px !important;
 }
 
-.deal-wine div {
+.deal-wine-footer {
     position: absolute;
-    top: 300px;
-    right: 85px;
+    top: 350px;
+    right: 56px;
     width: 140px;
     height: 40px;
     background: var(--color-secondary);
@@ -1348,6 +1415,7 @@ input[type="radio"] {
     background: white;
     padding: 70px 200px;
     width: 1170px;
+    max-width: 90%;
     opacity: 0;
     visibility: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -1533,20 +1601,21 @@ input[type="radio"] {
     color: rgb(137, 137, 137);
 }
 
-.vector-menu{
-filter: brightness(0) invert(1);}
+.vector-menu {
+    filter: brightness(0) invert(1);
+}
 
-.menu-modal-footer{
+.menu-modal-footer {
     display: flex;
     justify-content: space-between;
 }
 
-.menu-modal-footer-li{
+.menu-modal-footer-li {
     display: none;
 }
 
 
-.top-menu-icon{
+.top-menu-icon {
     width: 25px;
     height: 25px;
     cursor: pointer;

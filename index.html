@@ -24,14 +24,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="access/css/base.css">
+    <link rel="stylesheet" href="access/css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="access/css/owlcarousel/owl.theme.default.min.css">
+    <!-- <link rel="stylesheet" href="access/css/base.css">
     <link rel="stylesheet" href="access/css/header.css">
     <link rel="stylesheet" href="access/css/sidebar.css">
-    <link rel="stylesheet" href="access/css/tabs.css">
-    <link rel="stylesheet" href="access/css/footer.css">
-    <link rel="stylesheet" href="access/css/reponsive.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="access/css/reponsive.css"> -->
+    <link rel="stylesheet" href="style.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="access/js/owlcarousel/owl.carousel.min.js"></script>
 </head>
 
 <body>
@@ -85,6 +88,9 @@
                         </div>
                     </div>
                 </div>
+                    <div class="menu-toggle" id="menuToggle">
+                        ☰
+                    </div>
                 <h1>VINEYARD</h1>
                 <div class="top-menu-right ">
                     <img class="openModalLogin top-menu-icon sm-hidden" src="./access/icons/Vector-user.svg" alt="">
@@ -190,9 +196,7 @@
 
         <div class="banner">
             <div class="menu container-content">
-                <div class="menu-toggle" id="menuToggle">
-                    ☰ <!-- biểu tượng menu hamburger -->
-                </div>
+
                 <ul class="menu-desktop">
                     <li class="action"><a href="#">Home</a></li>
                     <li class="sub-menu-list"><a href="#">Shop</a></li>
@@ -348,10 +352,10 @@
 
             <div class="banner-logo">
                 <div>
-
                     <img src="./access/imgs/logo-banner.webp" alt="">
                     <button>shop now</button>
                 </div>
+
             </div>
         </div>
 
@@ -478,6 +482,10 @@
                     <div class="wind-product-item">
                         <div class="wind-product-img border-active">
                             <img src="./access/imgs/wine.webp" alt="">
+                            <div class="wind-product-new">
+                                new 
+                            </div>
+                            <span class="square-left"></span>
                         </div>
 
                         <div class="wind-content wind-content-hidden">
@@ -509,6 +517,10 @@
                     <div class="wind-product-item">
                         <div class="wind-product-img border-active">
                             <img src="./access/imgs/wine.webp" alt="">
+                            <div class="wind-product-sale">
+                                sale 
+                            </div>
+                            <span class="square-right"></span>
                         </div>
 
                         <div class="wind-content wind-content-hidden">
@@ -547,7 +559,7 @@
                     <div class="col-sm-1 col-xxl-2">
 
                     </div>
-                    <div class="col-sm-8 col-xxl-8 glo-title">
+                    <div class="col-sm-12 col-lg-6 col-xxl-8 glo-title">
                         <p class="">Deal Of Week</p>
                         <h1>tomatin 12 year old highland</h1>
                         <img class="deal-line" src="./access/icons/line.webp" alt="">
@@ -560,22 +572,22 @@
                         </div>
                         <div class="deal-time">
                             <div class="deal-time-item">
-                                <h1>23</h1>
+                                <h1 id="days">23</h1>
                                 <p class="deal-time-line"></p>
                                 <p>days</p>
                             </div>
                             <div class="deal-time-item">
-                                <h1>16</h1>
+                                <h1 id="hours">16</h1>
                                 <p class="deal-time-line"></p>
                                 <p>hours</p>
                             </div>
                             <div class="deal-time-item">
-                                <h1>05</h1>
+                                <h1 id="minutes">5</h1>
                                 <p class="deal-time-line"></p>
                                 <p>minutes</p>
                             </div>
                             <div class="deal-time-item">
-                                <h1>48</h1>
+                                <h1 id="seconds">48</h1>
                                 <p class="deal-time-line"></p>
                                 <p>second</p>
                             </div>
@@ -586,14 +598,37 @@
 
                     </div>
                 </div>
+
                 <div class="deal-wine">
-                    <img src="./access/imgs/wine2.png" alt="">
-                    <div>
-                        <span class="deal-wine-price">$215.00</span>
-                        <span class="deal-wine-hidden"></span>
+                    <div class="owl-carousel owl-theme deal-wine-list">
+                        <div class="deal-wine-item">
+                            <img src="./access/imgs/wine2.png" alt="">
+                            <div class="deal-wine-footer">
+                                <span class="deal-wine-price">$215.00</span>
+                                <span class="deal-wine-hidden"></span>
+                            </div>
+                        </div>
+                        <div class="deal-wine-item">
+                            <img src="./access/imgs/wine2.png" alt="">
+                            <div class="deal-wine-footer">
+                                <span class="deal-wine-price">$215.00</span>
+                                <span class="deal-wine-hidden"></span>
+                            </div>
+                        </div>
+                        <div class="deal-wine-item">
+                            <img src="./access/imgs/wine2.png" alt="">
+                            <div class="deal-wine-footer">
+                                <span class="deal-wine-price">$215.00</span>
+                                <span class="deal-wine-hidden"></span>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
+
+
+
+            </div>
             </div>
 
         </section>
@@ -1120,9 +1155,10 @@
 
         </div>
 
-
     </footer>
+
     <script src="access/js/main.js"></script>
+    <script src="access/js/slide.js"></script>
 </body>
 
 </html>
